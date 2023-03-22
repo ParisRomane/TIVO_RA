@@ -5,8 +5,8 @@ function [P,Hw0,K,s] = calibrate(I)
 [v, w] = vanishpoints(corners);
 %% Centrage de v et w et calcul de la focale (cf. cours)
 center = [size(I,1)/2;size(I,2)/2];
-v = v - center;
-w = w - center;
+v = v - center
+w = w - center
 fsqr = -(v(1)*w(1)+v(2)*w(2)); % cf. cours.
 if fsqr < 0
     disp('Calibration incorrecte');
